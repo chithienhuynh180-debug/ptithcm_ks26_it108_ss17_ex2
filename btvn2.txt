@@ -1,0 +1,10 @@
+Phần 1: Phân tích
+
+Css không cập nhật: trình duyệt lưu file css cũ trong browser cache để load cho nhanh. Khi F5 trình duyệt vẫn dùng bản cache chưa hết hạn nên nút vẫn màu xanh.
+
+Mất đăng nhập: cookie định danh không có Max-Age hay Expires nên nó là session cookie. Session cookie chỉ nằm trong bộ nhớ tạm, đóng trình duyệt là mất. Persistent cookie thì có Max-Age hoặc Expires nên được lưu vào ổ đĩa và còn lại sau khi đóng trình duyệt.
+
+Phần 2: Sửa lỗi
+
+1. Nhấn Ctrl + F5 (hoặc Ctrl + Shift + R) để hard reload, trình duyệt bỏ cache và tải lại css mới. Không cần xóa lịch sử web.
+2. Thêm Max-Age (ví dụ Max-Age=604800 là 7 ngày) hoặc Expires cho cookie đăng nhập để thành persistent cookie.
